@@ -1,0 +1,142 @@
+<div class="main-container">
+ <!-- Encabezado con menú alineado a la derecha -->
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <h1>UNIPUTUMAYO</h1>
+    </div>
+    <ul class="menu">
+      <li><a href="#"><i class="fas fa-home"></i></a></li> <!-- Ícono de casa -->
+      <li><a (click)="iniciarSesion()" class="login-btn">Iniciar Sesión</a></li> <!-- Cambiado href por click -->
+    </ul>
+  </nav>
+</header>
+
+    <!-- Sección de héroe -->
+    <!-- Sección de héroe -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>¡Domina el campo, reserva en segundos!</h1>
+    <p>Tú juegas, nosotros nos encargamos del resto. Reserva tu cancha sintética ahora y vive la pasión del fútbol.</p>
+    <br>
+    <ul>
+      <li><a (click)="iniciarSesion()">Reservas</a></li>
+      <li><a href="#schedule-section">Horarios</a></li>
+      <li><a href="#contact-section">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="hero-image">
+    <img src="https://conexionputumayo.com/wp-content/uploads/2022/03/itp-putumayo-universidad-1.png" alt="Imagen de cancha">
+  </div>
+</section>
+  
+    <!-- Carrusel de imágenes -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item active">
+          <img src="https://proyectostipo.dnp.gov.co/media/k2/items/cache/910084c4eb3461ee8947cd42bdd4b146_XL.jpg" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://golty.com.co/wp-content/uploads/2023/04/cancha-sintetica.png" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://bogota.gov.co/sites/default/files/u1011/canchas3.jpg" alt="Imagen 3">
+        </div>
+  
+        <!-- Controles de navegación -->
+        <button class="prev" (click)="prevSlide()">&#10094;</button>
+        <button class="next" (click)="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+  
+    <!-- Sección de horarios -->
+    <section id="schedule-section" class="schedule-section">
+      <h2>Horarios y Tarifas</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Día/Horario</th>
+            <th>Cancha Sintética</th>
+            <th>Precio/hora</th>
+            <th>Reserva</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes - Viernes (8:00 - 17:00)</td>
+            <td>⚽ Sintética</td>
+            <td>$30.000</td>
+            <td>
+              <button class="reserve-btn" (click)="iniciarSesion()">¡Reserva Ya!</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Lunes - Viernes (17:00 - 22:00)</td>
+            <td>⚽ Sintética</td>
+            <td>$30.000</td>
+            <td>
+              <button class="reserve-btn" (click)="iniciarSesion()">¡Reserva Ya!</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Sábados y Domingos</td>
+            <td>⚽ Sintética</td>
+            <td>$30.000</td>
+            <td>
+              <button class="reserve-btn" (click)="iniciarSesion()">¡Reserva Ya!</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+  
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+     
+    <!-- Sección de contacto -->
+    <section id="contact-section" class="contact-section">
+      <h2>Contacto</h2>
+      <div class="footer-contact">
+        <img src="https://i0.wp.com/itp.edu.co/ITP2022/wp-content/uploads/2023/01/descarga.png?fit=300%2C132&ssl=1" alt="Logo Institución" class="footer-logo">
+        <p><strong>Contacto Sede Mocoa</strong></p>
+        <p>Sede Principal: “Aire Libre” Barrio Luis Carlos Galán</p>
+        <p>Teléfonos: <a href="tel:+573138052807">+57 3138052807</a>, <a href="tel:+573103310083">+57 3103310083</a></p>
+        <p>Atención al Público: Lunes a Viernes de 8 a.m. a 12 m. y de 2 p.m. a 6 p.m.</p>
+        <p>Notificaciones judiciales: <a href="mailto:notificacionesjudiciales@itp.edu.co">notificacionesjudicialesitp.edu.co</a></p>
+      </div>
+    </section>
+
+    <!-- Sección de políticas -->
+    <div class="footer-policies">
+      <h3>Políticas</h3>
+      <p><a href="#">Términos y Condiciones</a></p>
+      <p><a href="#">Políticas de Privacidad</a></p>
+      <p><a href="#">Política de Cookies</a></p>
+    </div>
+
+    <!-- Redes Sociales -->
+<div class="footer-social">
+  <h3>Síguenos en</h3>
+  <div class="footer-social-icons">
+    <a href="https://www.facebook.com/OficialITP" target="_blank"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/itputumayo_/" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+    <a href="https://x.com/" target="_blank"><img src="https://img.icons8.com/color/48/000000/twitter-squared.png" alt="Twitter"></a>
+  </div>
+  <p>Mantente conectado con nosotros en las redes sociales para obtener las últimas noticias y actualizaciones.</p>
+</div>
+
+    
+  </div>
+<!-- Países y derechos reservados -->
+<div class="footer-bottom">
+  <p class="footer-left">© Cancha Sintética 2024. Todos los derechos reservados.</p>
+  <div class="footer-right">
+    <span>
+      <img src="https://th.bing.com/th/id/R.31c8d325e94503f00fb9edf441cbb9bc?rik=o%2b3bTvNisTX0Wg&riu=http%3a%2f%2fwww.going2colombia.com%2fimages%2fFlag.jpg&ehk=jU%2bES4kHwtntULnEji3VS6gR14rYV8ZMP%2bohXHhjQFA%3d&risl=&pid=ImgRaw&r=0" alt="Colombia" class="flag-icon"> 
+      <span class="country-name">Colombia</span>
+    </span>
+  </div>
+</div>
+

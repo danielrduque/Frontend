@@ -1,0 +1,164 @@
+/* Fijar la barra de navegación en la parte superior */
+.header {
+  position: fixed; /* Fija la posición en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupa el ancho completo */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1f3fad;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffffff;
+}
+
+}
+
+/* Contenedor principal */
+.main-container {
+  margin-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Estilo general del contenedor */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #a8dadc); /* Fondo degradado más llamativo */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+}
+
+/* Estilo del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;  /* Más espacio interno para un diseño más espacioso */
+  background-color: white;
+  border-radius: 25px; /* Esquinas más redondeadas */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin-top: 50px; /* Desplazamiento superior más acentuado */
+}
+
+form:hover {
+  transform: scale(1.04);  /* Ligeramente más grande al hacer hover */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+}
+
+/* Estilo del título principal */
+h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #333, #6a7f98); /* Degradado suave */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Estilo de los inputs */
+input {
+  margin-bottom: 20px;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #1d3557; /* Color más oscuro para el borde al enfocarse */
+  box-shadow: 0 0 10px rgba(29, 53, 87, 0.3); /* Sombra sutil */
+}
+
+/* Botón de inicio de sesión */
+button {
+  padding: 15px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #457b9d, #1d3557); /* Gradiente en tonos azules oscuros */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Botón más redondeado */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1d3557, #457b9d); /* Gradiente invertido al hacer hover */
+  transform: scale(1.08); /* Efecto de "zoom in" más llamativo */
+}
+
+/* Mensaje de error */
+.error-message {
+  color: #e63946;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Placeholder personalizado */
+input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Texto para términos y condiciones o links */
+.small-text {
+  font-size: 12px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.small-text a {
+  color: #1d3557;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.small-text a:hover {
+  text-decoration: underline;
+  color: #457b9d;
+}

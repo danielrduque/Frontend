@@ -1,0 +1,95 @@
+<div class="main-container">
+  <!-- Menú de navegación fijo -->
+  <div class="navbar menu-fijo">
+    <ul class="menu">
+      <li class="back">
+        <a (click)="navigateToReservas()" style="cursor: pointer">
+          <i class="fas fa-arrow-left"></i> Atrás
+        </a>
+      </li>
+      <li><a href="#schedule-section">Tarifas</a></li>
+      <li>
+        <a (click)="navigateToReservas()" style="cursor: pointer">Reservas</a>
+      </li>
+      <li><a href="#contact-section">Soporte</a></li>
+      <li><a href="/reports">Reportes</a></li>
+      <li class="right-align">
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="login-container">
+    <div class="report-container">
+      <h2>Informe de Reservas</h2>
+
+      <!-- Resumen General de Reservas -->
+      <div class="resumen">
+        <p>
+          <strong>Total de Reservas:</strong> {{ filteredReservations.length }}
+        </p>
+        <p>
+          <strong>Ganancias Totales:</strong> COP
+          {{ totalCost | currency : "COP" }}
+        </p>
+      </div>
+
+      <!-- Selector de año -->
+      <div class="date-selector">
+        <label for="reportYear">Seleccionar Año:</label>
+        <input
+          type="number"
+          id="reportYear"
+          [(ngModel)]="selectedYear"
+          (change)="fetchReport()"
+          [min]="2020"
+          [max]="currentYear"
+        />
+      </div>
+
+      <!-- Selector de mes para informes mensuales -->
+      <div class="date-selector">
+        <label for="reportMonth">Seleccionar Mes:</label>
+        <input
+          type="month"
+          id="reportMonth"
+          [(ngModel)]="selectedMonth"
+          (change)="fetchReport()"
+        />
+      </div>
+
+      <!-- Tabla para mostrar los datos del informe -->
+      <table class="report-table" *ngIf="filteredReservations.length > 0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Costo (COP)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reservation of filteredReservations">
+            <td>{{ reservation.nombre }}</td>
+            <td>{{ reservation.fecha }}</td>
+            <td>{{ reservation.hora }}</td>
+            <td>{{ 30000 | currency: 'COP' }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"><strong>Total Reservas</strong></td>
+            <td>{{ totalCost | currency : "COP" }}</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- Mensaje si no se encontraron reservas -->
+      <p *ngIf="filteredReservations.length === 0">
+        No se encontraron reservas para el período seleccionado.
+      </p>
+    </div>
+  </div>
+</div>
+

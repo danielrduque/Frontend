@@ -1,0 +1,374 @@
+/* Fijar la barra de navegación en la parte superior */
+.header {
+    position: fixed; /* Fija la posición en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupa el ancho completo */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Contenedor principal */
+.main-container {
+    margin-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Estilo para los enlaces tipo botón en la sección de héroe */
+.hero-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.hero-content li {
+    display: inline;
+}
+
+.hero-content a {
+    padding: 10px 20px;
+    background-color: #1f3fad; /* Fondo azul oscuro */
+    border: 2px solid #1f3fad; /* Borde azul oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.hero-content a:hover {
+    background-color: #336699; /* Fondo azul más claro en hover */
+    border-color: #336699; /* Cambia el color del borde en hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Incrementa la sombra en hover */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1f3fad;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+/* Botón de Iniciar Sesión */
+.login-btn {
+    padding: 10px 20px;
+    background-color: #1f3fad; /* Fondo amarillo */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    color: #f0f3f7; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.login-btn:hover {
+    background-color: #1f3fad; /* Fondo más claro en hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Incrementa la sombra en hover */
+}
+
+/* Botones */
+.cta-btn, .reserve-btn {
+    background-color: #ffd633;
+    border: none;
+    padding: 10px 20px;
+    color: #1f3fad;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover, .reserve-btn:hover {
+    background-color: #3bea1c;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    color: rgb(0, 0, 0);
+}
+
+.hero-content {
+    max-width: 50%; /* Ajusta el ancho máximo */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.hero-image img {
+    max-width: 550px;
+    border-radius: 30px;
+}
+
+/* Tabla de horarios */
+.schedule-section {
+    padding: 40px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.schedule-table {
+    width: 100%; /* Cambié el ancho para alinearlo */
+    margin: 0 auto; /* Centramos la tabla */
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.schedule-table th {
+    background-color: #1f3fad;
+    color: white;
+    
+}/* Footer */
+
+.footer {
+    background-color: #1f3fad;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;  /* Ampliar el ancho máximo del contenido */
+    margin: 0 auto;
+}
+
+.footer-contact, .footer-policies, .footer-social {
+    flex: 1; /* Asegura que cada sección ocupe el espacio necesario */
+    padding: 10px;
+    min-width: 200px; /* Asegura un mínimo de ancho para que no se superpongan en pantallas pequeñas */
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.footer-policies {
+    text-align: left;
+}
+
+.footer-social {
+    text-align: left;
+}
+
+.footer h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos de redes sociales */
+    margin-top: 10px;
+}
+
+.footer-social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 10px;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* Alinea el texto a la izquierda y la bandera a la derecha */
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 0.9em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.flag-icon {
+    width: 30px;   /* Cambiamos el tamaño de la bandera a 30px */
+    height: 20px;  /* Mantiene la proporción original */
+    margin-right: 8px; /* Espacio entre la bandera y el texto "Colombia" */
+}
+
+.footer-right span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea la bandera y el texto hacia la derecha */
+}
+
+.country-name {
+    font-size: 16px; /* Ajuste del tamaño del texto si es necesario */
+    color: #ffffff; /* Cambia el color del texto si es necesario */
+}
+
+
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%; /* Fuerza que las imágenes ocupen el 100% del ancho del contenedor */
+    height: 400px; /* Puedes ajustar esta altura según lo que necesites */
+    object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsionar */
+    border-radius: 15px;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ajustes generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        position: relative; /* Cambia la posición para dispositivos móviles si es necesario */
+        padding: 10px;
+    }
+
+    .hero {
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        padding: 20px; /* Reduce el padding */
+    }
+
+    .hero-content {
+        max-width: 100%; /* Elimina el límite de ancho en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .hero-content h1 {
+        font-size: 36px; /* Reduce el tamaño de la fuente */
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-width: 100%; /* Asegura que la imagen se ajuste al ancho de la pantalla */
+        height: auto; /* Mantén las proporciones */
+    }
+
+    .menu {
+        flex-direction: column; /* Cambia la dirección de los elementos de la barra de navegación */
+        gap: 10px; /* Reduce el espacio entre los enlaces */
+    }
+
+    .carousel-item img {
+        height: 250px; /* Ajusta la altura de las imágenes del carrusel */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Cambia la disposición del footer a vertical */
+    }
+
+    .schedule-section, .schedule-table {
+        padding: 10px;
+        font-size: 14px; /* Reduce el tamaño de la fuente de la tabla */
+    }
+}

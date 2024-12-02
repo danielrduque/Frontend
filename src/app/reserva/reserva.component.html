@@ -1,0 +1,177 @@
+<div class="main-container">
+  <div class="navbar menu-fijo">
+    <!-- Menú de navegación -->
+    <ul class="menu">
+      <li><a href="#schedule-section">Tarifas</a></li>
+      <li>
+        <a (click)="navigateToReservas()" style="cursor: pointer">Reservas</a>
+      </li>
+      <li><a href="#contact-section">Soporte</a></li>
+      <li><a href="/reports">Reportes</a></li>
+
+      <!-- Icono de "Casa" y "Cerrar sesión" alineados a la derecha -->
+      <li class="right-align">
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container mt-5">
+    <h1>Reserva tu Cancha Sintética Uniputumayo</h1>
+    <div class="row">
+      <div class="col">
+        <div class="info-box">
+          <h2>Información Importante</h2>
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-restricciones-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-restricciones"
+                type="button"
+                role="tab"
+              >
+                Restricciones
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-consideraciones-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-consideraciones"
+                type="button"
+                role="tab"
+              >
+                Consideraciones
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-recomendaciones-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-recomendaciones"
+                type="button"
+                role="tab"
+              >
+                Recomendaciones
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-restricciones"
+              role="tabpanel"
+            >
+              <p><strong>No se puede usar la cancha en caso de:</strong></p>
+              <ul>
+                <li>Fuerte lluvia o tormenta eléctrica.</li>
+                <li>
+                  Franjas asignadas para mantenimientos del campo sintético.
+                </li>
+                <li>
+                  Situaciones de fuerza mayor (manifestaciones, emergencias
+                  sanitarias).
+                </li>
+              </ul>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-consideraciones"
+              role="tabpanel"
+            >
+              <p><strong>Tener en cuenta:</strong></p>
+              <ul>
+                <li>Las reservas gratuitas no se pueden reprogramar.</li>
+                <li>
+                  Las reservas realizadas por el portal solo se reprograman por
+                  lluvias con tormenta eléctrica.
+                </li>
+                <li>
+                  La institución no se hace responsable por la pérdida de
+                  elementos personales.
+                </li>
+                <li>Se debe entregar el escenario en buen estado.</li>
+              </ul>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-recomendaciones"
+              role="tabpanel"
+            >
+              <p><strong>Recomendaciones:</strong></p>
+              <ul>
+                <li>Dejar la mascota fuera del campo.</li>
+                <li>Colocar bicicletas en la parte externa.</li>
+                <li>Consumir alimentos fuera de la cancha.</li>
+                <li>Se recomienda el uso de tenis torretin.</li>
+                <li>No usar guayos con taches de aluminio.</li>
+                <li>No mover los arcos para evitar accidentes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-box">
+          <h2>Reservar Cancha</h2>
+
+          <form (ngSubmit)="agregarReserva()">
+            <label for="nombre">Nombre:</label>
+            <input
+              [(ngModel)]="nuevaReserva.nombre"
+              name="nombre"
+              id="nombre"
+              required
+            />
+
+            <label for="fecha">Fecha:</label>
+            <input
+              [(ngModel)]="nuevaReserva.fecha"
+              name="fecha"
+              id="fecha"
+              type="date"
+              required
+            />
+
+            <label for="hora">Hora:</label>
+            <select
+              [(ngModel)]="nuevaReserva.hora"
+              name="hora"
+              id="hora"
+              required
+            >
+              <option 
+                *ngFor="let hora of horasDisponibles" 
+                [value]="hora" 
+                [ngClass]="{'hora-ocupada': isHoraOcupada(hora)}">
+                {{ hora }} - {{ getHoraFin(hora) }}
+              </option>
+            </select>
+
+            <button type="submit">Reserva Ya !</button>
+          </form>
+
+          <!-- Mostrar mensaje de error si existe -->
+          <div *ngIf="mensajeError" class="error">{{ mensajeError }}</div>
+        </div>
+
+        <div class="reservas-box" id="reservas-actuales">
+          <h2>Reservas actuales</h2>
+          <ul>
+            <li *ngFor="let reserva of reservas">
+              <strong>{{ reserva.nombre }}</strong> - {{ reserva.fecha }} de
+              {{ reserva.hora }} a {{ getHoraFin(reserva.hora) }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+/* Media Queries para Responsividad */
+
+/* iPhone SE */
+@media (max-width: 375px) {
+  /* Estilos específicos para iPhone SE */
+}
+
+/* iPhone 8 */
+@media (max-width: 375px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 8 */
+}
+
+/* iPhone 8 Plus */
+@media (max-width: 414px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 8 Plus */
+}
+
+/* iPhone X, XS */
+@media (max-width: 375px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone X */
+}
+
+/* iPhone 11 Pro */
+@media (max-width: 375px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 11 Pro */
+}
+
+/* iPhone 11 */
+@media (max-width: 414px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 11 */
+}
+
+/* iPhone 12 Mini */
+@media (max-width: 375px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 12 Mini */
+}
+
+/* iPhone 12/12 Pro */
+@media (max-width: 390px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 12/12 Pro */
+}
+
+/* iPhone 12 Pro Max */
+@media (max-width: 430px) and (orientation: portrait) {
+  /* Estilos específicos para iPhone 12 Pro Max */
+}
+
+/* Samsung Galaxy S8/S9 */
+@media (max-width: 360px) {
+  /* Estilos específicos para Galaxy S8/S9 */
+}
+
+/* Samsung Galaxy Note 8 */
+@media (max-width: 411px) {
+  /* Estilos específicos para Galaxy Note 8 */
+}
+
+/* iPad (portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
+  /* Estilos específicos para iPad (portrait) */
+}
+
+/* iPad (landscape) */
+@media (max-width: 1024px) and (orientation: landscape) {
+  /* Estilos específicos para iPad (landscape) */
+}
+
+/* MacBook Pro 13 */
+@media (max-width: 1280px) {
+  /* Estilos específicos para MacBook Pro 13 */
+}
+
+/* MacBook Pro 15 */
+@media (max-width: 1440px) {
+  /* Estilos específicos para MacBook Pro 15 */
+}
+
+/* MacBook Pro 16 */
+@media (max-width: 1536px) {
+  /* Estilos específicos para MacBook Pro 16 */
+}
+
+/* Pantallas más grandes */
+@media (min-width: 1600px) {
+  /* Estilos para pantallas grandes */
+}
